@@ -1,0 +1,23 @@
+name: Installing components v3.261.0
+
+on:
+    workflow_dispatch
+
+jobs:
+    do-install:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v6
+            - name: Install UV
+              uses: astral-sh/setup-uv@v7
+            - name: Install Pulumi
+              uses: pulumi/actions@v6
+              with: 
+                pulumi-version: "v3.261.0"
+            - name: Login locally
+              run: pulumi login --local
+            - name: Create stack
+              run: pulumi stack init dev
+            - name: Run pulumi install
+              run: pulumi install
