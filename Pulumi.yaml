@@ -1,0 +1,14 @@
+name: pulumi-insall-regression
+description: A minimal Azure Native Python Pulumi program
+runtime:
+  name: python
+  options:
+    toolchain: uv
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-python
+packages:
+  storage: github.com/pierskarsenbarg/storage@0f58b08c6eb2ab5a7e805b345c74fa536b7b4c57
+  container-services: github.com/pulumi-pequod/component-container-services
+  random-abstracted: github.com/pulumi-pequod/component-random

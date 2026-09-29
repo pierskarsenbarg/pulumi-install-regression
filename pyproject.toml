@@ -1,0 +1,16 @@
+[project]
+name = "pulumi-insall-regression"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "pierskarsenbarg-storage",
+    "pulumi>=3.0.0,<4.0.0",
+    "pulumi-azure-native>=3.0.0,<4.0.0",
+    "pulumi-pequod-container-services",
+    "pulumi-pequod-random-abstracted",
+]
+
+[tool.uv.sources]
+pulumi-pequod-container-services = { path = "sdks/pulumi-pequod-container-services" }
+pulumi-pequod-random-abstracted = { path = "sdks/pulumi-pequod-random-abstracted" }
+pierskarsenbarg-storage = { path = "sdks/pierskarsenbarg-storage" }
