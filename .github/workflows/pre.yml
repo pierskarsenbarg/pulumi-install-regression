@@ -3,6 +3,9 @@ name: Installing components v3.261.0
 on:
     workflow_dispatch
 
+env:
+    PULUMI_CONFIG_PASSPHRASE: ""
+
 jobs:
     do-install:
         runs-on: ubuntu-latest
