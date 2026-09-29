@@ -22,5 +22,7 @@ jobs:
               run: pulumi login --local
             - name: Create stack
               run: pulumi stack init dev
+            - name: Pulumi About
+              run: pulumi about
             - name: Run pulumi install
               run: pulumi install
